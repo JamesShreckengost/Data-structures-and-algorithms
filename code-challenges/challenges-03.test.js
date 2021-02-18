@@ -20,9 +20,15 @@ function upper(str) {
 function lower(str) {
   return str.toLowerCase();
 }
-
+// updateAnimal(arr, upper)[0]).toStrictEqual('BEAR') function => (updateAnimal(arr, upper)[1]).toStrictEqual('LION')
 const updateAnimal = (arr, callback) => {
   // Solution code here...
+  // animals = [];
+  // animals.sort(arr, callback) {
+  //   if (str.toLowerCase > )
+  // }
+  
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +41,7 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
   // Solution code here...
-};
+}; 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
