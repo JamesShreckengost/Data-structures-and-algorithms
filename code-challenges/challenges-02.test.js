@@ -7,14 +7,17 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
-// [2, 4, 5, -7, 0] => raisedToTheThird([8, 64, 125, -343, 0]);
+
+// raisedToTheThird[8, 64, 125, -343, 0]
 const raisedToTheThird = (arr) => {
   // Solution code here...
   const result = [];
+  // work here
   arr.forEach(function(number) {
-    result.push(Math.power(number, 3));
+    result.push(Math.pow(number, 3))
   });
-  return result
+  return result;
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,17 +26,19 @@ CHALLENGE 2
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
 
 ------------------------------------------------------------------------------------------------ */
-// ('This is my story.') function=> ('This is my story. The end.')
+
+// ('This is my story. The end.')
 const appendTheEnd = (str) => {
   // Solution code here...
- const result = [];
-   const result2 = [];
-   str.forEach(function(str) {
-     result.push(str);
-     result2.push(str + ' The end.')
-   }); 
-   return result2
-  };
+  const result = [];
+  //  work goes here
+  arr.forEach(function(str) {
+    str.append(' The end.')
+  });
+  return result;
+};
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -46,14 +51,16 @@ const a = [1, 2, 3];
 appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
-// ['Yes', 'it', 'is'] function => ['Yes', 'it', 'is', 'Yes']
+
+=======
+
 const appendFirstToLast = (arr) => {
   // Solution code here...
   const result = [];
-  arr.forEach(function(arr) {
-    result.push(str.appendFirstToLast(a));
-  });
-  return result
+  arr.forEach(arr => {
+    arr.append(arr[0]);
+  })
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +80,9 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
-};
+
+
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -88,8 +97,14 @@ setStatusAsAuthor(people);
 console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
+// const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+// const output = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
 const setStatusAsAuthor = (people) => {
   // Solution code here...
+  people.forEach(person => {
+    person.isAuthor = true;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,14 +138,17 @@ Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+
+describe('Testing challenge 1', () => {
+
   test('It should return a new array of numbers raised to the thrid power', () => {
     expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
   });
 });
 
-xdescribe('Testing challenge 2', () => {
-  test('It should append without modifying the oiginal', () => {
+describe('Testing challenge 2', () => {
+  test('It should append without modifying the original', () => {
+
     const a = 'This is my story.';
     const b = appendTheEnd(a);
 
