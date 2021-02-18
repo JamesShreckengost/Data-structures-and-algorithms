@@ -27,13 +27,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 // ('This is my story. The end.')
 const appendTheEnd = (str) => {
   // Solution code here...
-  const result = [];
-  //  work goes here
-  arr.forEach(function(str) {
-    str.append(' The end.')
-  });
-  return result;
-};
+  return new String(str) + ' The end.';
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -50,10 +45,9 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  const result = [];
-  arr.forEach(arr => {
-    arr.append(arr[0]);
-  })
+  arr.push(arr[0]);
+  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,6 +67,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+  obj.yearBorn = year;
 
 }
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +138,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should append by modifying the oiginal', () => {
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
@@ -152,7 +147,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should add a property to an object', () => {
     const a = { fullName: 'Octavia Butler' };
     addBirthYearProperty(a, 1947);
