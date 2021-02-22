@@ -7,6 +7,7 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
+
 // raisedToTheThird[8, 64, 125, -343, 0]
 const raisedToTheThird = (arr) => {
   // Solution code here...
@@ -16,6 +17,7 @@ const raisedToTheThird = (arr) => {
     result.push(Math.pow(number, 3))
   });
   return result;
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,11 +26,13 @@ CHALLENGE 2
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
 
 ------------------------------------------------------------------------------------------------ */
+
 // ('This is my story. The end.')
 const appendTheEnd = (str) => {
   // Solution code here...
   return new String(str) + ' The end.';
   }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -43,10 +47,16 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
+=======
+
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  arr.push(arr[0]);
-  
+
+  const result = [];
+  arr.forEach(arr => {
+    arr.append(arr[0]);
+  })
+
 
 };
 
@@ -69,7 +79,9 @@ const addBirthYearProperty = (obj, year) => {
   // Solution code here...
   obj.yearBorn = year;
 
+
 }
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
@@ -82,6 +94,7 @@ const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
 setStatusAsAuthor(people);
 console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
+
 // const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
 // const output = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
 const setStatusAsAuthor = (people) => {
@@ -89,6 +102,7 @@ const setStatusAsAuthor = (people) => {
   people.forEach(person => {
     person.isAuthor = true;
   });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +136,9 @@ Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
+
 describe('Testing challenge 1', () => {
+
   test('It should return a new array of numbers raised to the thrid power', () => {
     expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
   });
@@ -130,6 +146,7 @@ describe('Testing challenge 1', () => {
 
 describe('Testing challenge 2', () => {
   test('It should append without modifying the original', () => {
+
     const a = 'This is my story.';
     const b = appendTheEnd(a);
 
